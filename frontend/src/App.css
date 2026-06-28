@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════════════
+   APP LAYOUT & NAVIGATION
+   ═══════════════════════════════════════════════════════════ */
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  margin: 16px;
+  border-radius: var(--radius-lg);
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+}
+
+.app-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-nav__logo {
+  font-size: 1.4rem;
+  color: var(--accent-blue);
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.5));
+}
+
+.app-nav__title {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-nav__links {
+  display: flex;
+  gap: 4px;
+}
+
+.app-nav__link {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.app-nav__link:hover {
+  color: var(--text-primary);
+  background: var(--midnight-500);
+}
+
+.app-nav__link.active {
+  color: var(--accent-blue-light);
+  background: var(--accent-blue-glow);
+}
+
+.app-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-nav__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-nav__user-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* ─── Loading State ──────────────────────────────────────── */
+
+.app-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 60vh;
+  color: var(--text-muted);
+}
+
+.app-loading__spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--midnight-400);
+  border-top-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .app-nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    margin: 8px;
+  }
+
+  .app-nav__links {
+    width: 100%;
+    justify-content: center;
+  }
+}

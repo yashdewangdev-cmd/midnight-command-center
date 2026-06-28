@@ -1,0 +1,84 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.08), transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.06), transparent 50%),
+    var(--midnight-800);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+}
+
+.login-card__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-card__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+
+.login-card__subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.login-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.login-card__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card__submit {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.login-card__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.login-card__toggle-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.login-card__toggle-btn {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-blue-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: color var(--transition-fast);
+}
+
+.login-card__toggle-btn:hover {
+  color: var(--accent-blue);
+}

@@ -1,0 +1,62 @@
+.work-timer {
+  padding: 24px;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.work-timer--active {
+  border-color: rgba(16, 185, 129, 0.3);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.work-timer__display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.work-timer__pulse {
+  width: 10px;
+  height: 10px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  animation: timer-pulse 1s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.work-timer__time {
+  font-size: 3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.work-timer__task {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.work-timer__controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.work-timer__stats {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.work-timer__stat {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}

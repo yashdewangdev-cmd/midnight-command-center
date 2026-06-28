@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════════════════
+   WARNING MESSAGE — Bulletproof Text Wrapping
+   Eliminates ALL horizontal clipping on any viewport.
+   ═══════════════════════════════════════════════════════════ */
+
+.warning-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  animation: fadeIn 0.3s ease-out;
+
+  /* ─── CRITICAL: Force fluid dynamic text wrapping ────── */
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  min-width: 0;        /* Allow flex child to shrink */
+  max-width: 100%;     /* Never exceed container */
+  hyphens: auto;
+}
+
+.warning-message--warning {
+  background: var(--accent-amber-glow);
+  border-left-color: var(--accent-amber);
+}
+
+.warning-message--error {
+  background: var(--accent-rose-glow);
+  border-left-color: var(--accent-rose);
+}
+
+.warning-message--info {
+  background: var(--accent-blue-glow);
+  border-left-color: var(--accent-blue);
+}
+
+.warning-message--success {
+  background: var(--accent-emerald-glow);
+  border-left-color: var(--accent-emerald);
+}
+
+.warning-message__icon {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.warning-message__content {
+  flex: 1;
+  min-width: 0;             /* Allow content to shrink below flex basis */
+
+  /* ─── CRITICAL: Force text wrapping in content area ──── */
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.warning-message__title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.warning-message__body {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+
+  /* ─── CRITICAL: Force wrapping at body level too ─────── */
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}

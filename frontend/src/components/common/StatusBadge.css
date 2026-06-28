@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════════════════
+   STATUS BADGE — Persistent Visibility
+   Uses :where() to prevent grid selection from overriding.
+   ═══════════════════════════════════════════════════════════ */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  line-height: 1;
+  /* CRITICAL: Ensure badge stays visible when row is selected in data grids */
+  position: relative;
+  z-index: 1;
+}
+
+.status-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── Task Status ────────────────────────────────────────── */
+
+:where(.status-badge).badge--todo {
+  background: var(--accent-blue-glow);
+  color: var(--accent-blue-light);
+}
+:where(.status-badge).badge--todo .status-badge__dot {
+  background: var(--accent-blue);
+}
+
+:where(.status-badge).badge--in-progress {
+  background: var(--accent-amber-glow);
+  color: var(--accent-amber-light);
+}
+:where(.status-badge).badge--in-progress .status-badge__dot {
+  background: var(--accent-amber);
+  animation: timer-pulse 1.5s ease-in-out infinite;
+}
+
+:where(.status-badge).badge--completed {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald-light);
+}
+:where(.status-badge).badge--completed .status-badge__dot {
+  background: var(--accent-emerald);
+}
+
+:where(.status-badge).badge--cancelled {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-muted);
+}
+:where(.status-badge).badge--cancelled .status-badge__dot {
+  background: var(--text-muted);
+}
+
+/* ─── FINISHED — Persistent, unaffected by grid selection ── */
+
+:where(.status-badge).badge--finished {
+  background: linear-gradient(135deg, var(--accent-emerald-glow), rgba(16, 185, 129, 0.25));
+  color: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+:where(.status-badge).badge--finished .status-badge__dot {
+  background: var(--accent-emerald);
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+/* ─── Priority Levels ────────────────────────────────────── */
+
+:where(.status-badge).badge--low {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-secondary);
+}
+:where(.status-badge).badge--low .status-badge__dot { background: var(--text-secondary); }
+
+:where(.status-badge).badge--medium {
+  background: var(--accent-blue-glow);
+  color: var(--accent-blue-light);
+}
+:where(.status-badge).badge--medium .status-badge__dot { background: var(--accent-blue); }
+
+:where(.status-badge).badge--high {
+  background: var(--accent-amber-glow);
+  color: var(--accent-amber-light);
+}
+:where(.status-badge).badge--high .status-badge__dot { background: var(--accent-amber); }
+
+:where(.status-badge).badge--critical {
+  background: var(--accent-rose-glow);
+  color: var(--accent-rose-light);
+}
+:where(.status-badge).badge--critical .status-badge__dot {
+  background: var(--accent-rose);
+  animation: timer-pulse 1s ease-in-out infinite;
+}
+
+/* ─── Session Status ─────────────────────────────────────── */
+
+:where(.status-badge).badge--active {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald-light);
+}
+:where(.status-badge).badge--active .status-badge__dot {
+  background: var(--accent-emerald);
+  animation: timer-pulse 1s ease-in-out infinite;
+}
+
+:where(.status-badge).badge--paused {
+  background: var(--accent-amber-glow);
+  color: var(--accent-amber-light);
+}
+:where(.status-badge).badge--paused .status-badge__dot { background: var(--accent-amber); }
+
+.badge--default {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-secondary);
+}
+.badge--default .status-badge__dot { background: var(--text-secondary); }

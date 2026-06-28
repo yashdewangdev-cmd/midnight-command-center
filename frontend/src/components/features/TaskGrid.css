@@ -1,0 +1,125 @@
+.task-grid {
+  padding: 0;
+  overflow: hidden;
+}
+
+.task-grid__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.task-grid__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.task-grid__count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--midnight-500);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.task-grid__table-wrapper {
+  overflow-x: auto;
+}
+
+.task-grid__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-grid__table thead {
+  background: var(--midnight-600);
+}
+
+.task-grid__table th {
+  padding: 10px 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.task-grid__th--sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--transition-fast);
+}
+
+.task-grid__th--sortable:hover {
+  color: var(--accent-blue-light);
+}
+
+.task-grid__row {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.task-grid__row:hover {
+  background: var(--midnight-500);
+}
+
+/* ─── Selected row: status badges stay visible via :where() ─── */
+.task-grid__row--selected {
+  background: var(--accent-blue-glow);
+  border-left: 3px solid var(--accent-blue);
+}
+
+.task-grid__row--selected:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.task-grid__table td {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  vertical-align: middle;
+}
+
+.task-grid__cell-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.task-grid__task-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.task-grid__due-date {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.task-grid__cell-secondary {
+  color: var(--text-secondary);
+}
+
+.task-grid__cell-hours {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-blue-light);
+}
+
+.task-grid__cell-actions {
+  white-space: nowrap;
+}
+
+.task-grid__empty {
+  text-align: center;
+  padding: 40px 16px !important;
+  color: var(--text-muted);
+  font-style: italic;
+}

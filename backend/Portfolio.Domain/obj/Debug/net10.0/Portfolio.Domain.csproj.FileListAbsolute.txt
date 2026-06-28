@@ -1,0 +1,11 @@
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\bin\Debug\net10.0\Portfolio.Domain.deps.json
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\bin\Debug\net10.0\Portfolio.Domain.dll
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\bin\Debug\net10.0\Portfolio.Domain.pdb
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\Portfolio.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\Portfolio.Domain.AssemblyInfoInputs.cache
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\Portfolio.Domain.AssemblyInfo.cs
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\Portfolio.Domain.csproj.CoreCompileInputs.cache
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\Portfolio.Domain.dll
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\refint\Portfolio.Domain.dll
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\Portfolio.Domain.pdb
+D:\Personal\Projects\midnight-command-center\backend\Portfolio.Domain\obj\Debug\net10.0\ref\Portfolio.Domain.dll
