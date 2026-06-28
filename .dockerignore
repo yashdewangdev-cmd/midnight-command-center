@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+*.user
+
+# .NET
+**/bin/
+**/obj/
+*.log
+
+# Node / Frontend
+**/node_modules/
+**/dist/
+npm-debug.log
+yarn-error.log
+
+# Mac
+.DS_Store
