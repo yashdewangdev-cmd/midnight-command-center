@@ -134,6 +134,9 @@ if (app.Environment.IsDevelopment())
     await dbContext.Database.MigrateAsync();
 }
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
@@ -146,6 +149,8 @@ app.MapGet("/health", () => Results.Ok(new
     timestamp = DateTime.UtcNow,
     version = "1.0.0"
 }));
+
+app.MapFallbackToFile("index.html");
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
 app.Run($"http://0.0.0.0:{port}");

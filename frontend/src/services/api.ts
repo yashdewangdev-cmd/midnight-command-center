@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { AuthResponse, RefreshTokenRequest } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:10000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'http://localhost:10000');
 
 const api = axios.create({
   baseURL: API_BASE_URL,

@@ -1,26 +1,13 @@
 services:
-  # ─── Backend Service (.NET Web API) ───
+  # ─── Combined Full-Stack Service ───
   - type: web
-    name: midnight-command-backend
+    name: midnight-command-center
     env: docker
     region: ohio # Change to your preferred region (e.g., frankfurt, oregon, etc.)
-    rootDir: backend
-    dockerfilePath: ./Portfolio.Api/Dockerfile
+    rootDir: .
+    dockerfilePath: ./Dockerfile
     dockerContext: .
     autoDeploy: true # Render will automatically deploy when changes are pushed to GitHub
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
-
-  # ─── Frontend Service (React + Vite) ───
-  - type: web
-    name: midnight-command-frontend
-    env: static
-    region: ohio
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    publishPath: ./dist
-    autoDeploy: true
-    envVars:
-      - key: VITE_API_URL
-        value: https://midnight-command-backend.onrender.com # This will be the URL of your backend. Update it to match your backend's Render URL if different.
